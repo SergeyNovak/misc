@@ -1,0 +1,29 @@
+
+"""
+Реализуйте метод, определяющий, является ли одна строка 
+перестановкой другой. Под перестановкой понимаем любое 
+изменение порядка символов. Регистр учитывается, пробелы 
+являются существенными.
+"""
+
+
+def is_permutation(a: str, b: str) -> bool:
+    # Нужно проверить, являются ли строчки 'a' и 'b' перестановками
+    if len(a) != len(b):
+        return False
+    else:
+        if bool(set(a) - set(b)) == 1 or bool(set(b) - set(a)) == 1:
+            return False
+        else:
+            return True
+
+
+is_permutation('baba', 'abab')
+print('-----')
+is_permutation('abbba', 'abab')
+print('-----')
+is_permutation('bada', 'abab')
+print('-----')
+is_permutation('ba4da', 'ab1ab')
+print('-----')
+is_permutation('lionen', 'online')
