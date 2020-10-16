@@ -1,0 +1,17 @@
+def palindrome(word):
+    if word.lower() == word[::-1].lower():
+        print('Yes')
+    else: 
+        print('No')
+   
+   
+palindrome('Anna')
+palindrome('Civic')
+palindrome('Kayak')
+palindrome('Level')
+palindrome('Madam')
+palindrome('Mom')
+palindrome('Noon')
+palindrome('Racecar')
+palindrome('Racec2ar')
+palindrome('sergeyegres')
